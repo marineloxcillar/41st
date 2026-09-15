@@ -1,0 +1,489 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    background:
+        radial-gradient(
+            circle at top left,
+            #eee4d5 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #e5d6c6 0%,
+            transparent 35%
+        ),
+        #d8c8b7;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding: 45px 25px;
+
+    color: #3d3029;
+}
+
+
+/* =========================
+   BOOK
+========================= */
+
+.book {
+    width: min(1180px, 100%);
+    min-height: 720px;
+
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    position: relative;
+
+    background: #f4eadb;
+
+    box-shadow:
+        0 30px 60px rgba(55, 39, 29, 0.25),
+        0 8px 20px rgba(55, 39, 29, 0.15);
+
+    border-radius: 4px;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   LEFT PAGE
+========================= */
+
+.left-page {
+    position: relative;
+
+    min-height: 720px;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #e9dbc9 0%,
+            #f2e6d6 94%,
+            #d8c6b1 100%
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================
+   BOOK SPRING
+========================= */
+
+.book-spring {
+    position: absolute;
+
+    left: 42.5%;
+    top: 0;
+
+    width: 45px;
+    height: 100%;
+
+    object-fit: fill;
+
+    z-index: 10;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   PHOTOBOOTH
+========================= */
+
+.photobooth {
+    width: 250px;
+}
+
+.photobooth img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* =========================
+   LEFT DECORATION
+========================= */
+
+.left-decoration {
+    margin-top: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    font-family: "Courier New", Courier, monospace;
+
+    color: #7b6252;
+
+    text-align: center;
+}
+
+
+.left-decoration span {
+    font-size: 20px;
+}
+
+
+.left-decoration p {
+    margin: 0;
+
+    font-size: 17px;
+
+    font-style: italic;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   RIGHT PAGE
+========================= */
+
+.right-page {
+    min-height: 720px;
+
+    padding: 65px 75px 55px 70px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #eee1d0 0%,
+            #f7eee2 4%,
+            #f8f0e5 100%
+        );
+
+    position: relative;
+}
+
+
+/* =========================
+   PAPER TEXTURE
+========================= */
+
+.right-page::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.3;
+
+    background-image:
+        radial-gradient(
+            rgba(100, 75, 55, 0.08) 0.6px,
+            transparent 0.6px
+        );
+
+    background-size: 5px 5px;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter {
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 720px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.letter h1 {
+    font-family: "Pinyon Script", cursive;
+
+    font-size: clamp(42px, 5vw, 68px);
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    text-align: center;
+
+    color: #5f4638;
+
+    margin: 0 0 20px;
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 25px 0 28px;
+}
+
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    width: 70px;
+
+    height: 1px;
+
+    background: #bda995;
+}
+
+
+.divider span {
+    font-family: serif;
+
+    font-size: 17px;
+
+    color: #8b6d59;
+}
+
+
+/* =========================
+   LETTER TEXT
+========================= */
+
+.letter p {
+    margin: 0 0 25px;
+
+    font-family: "Courier New", Courier, monospace;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+
+    color: #45372f;
+
+    text-align: left;
+}
+
+
+/* =========================
+   SALUTATION
+========================= */
+
+.salutation {
+    margin-bottom: 22px !important;
+
+    font-size: 16px !important;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   SIGNATURE
+========================= */
+
+.signature {
+    margin-top: 35px;
+
+    text-align: right;
+
+    font-family: "Courier New", Courier, monospace;
+
+    color: #705849;
+}
+
+
+.signature span {
+    display: block;
+
+    font-size: 13px;
+
+    font-style: italic;
+
+    margin-bottom: 5px;
+}
+
+
+.signature p {
+    display: block;
+
+    text-align: right;
+
+    font-family: "Courier New", Courier, monospace;
+
+    font-size: 14px;
+
+    font-weight: normal;
+
+    line-height: 1;
+}
+
+
+/* =========================
+   RESPONSIVE - TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+
+    .book {
+        grid-template-columns: 1fr;
+
+        max-width: 650px;
+    }
+
+
+    .left-page {
+        min-height: auto;
+
+        padding: 40px 30px;
+    }
+
+
+    .photobooth {
+        width: 65%;
+
+        max-width: 250px;
+    }
+
+
+    .photobooth img {
+        max-height: 500px;
+    }
+
+
+    .right-page {
+        min-height: auto;
+
+        padding: 55px 40px;
+    }
+
+
+    /*
+       Hide the center spring when
+       the pages stack vertically.
+    */
+    .book-spring {
+        display: none;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE - MOBILE
+========================= */
+
+@media (max-width: 550px) {
+
+    body {
+        padding: 15px 10px;
+    }
+
+
+    .book {
+        border-radius: 3px;
+    }
+
+
+    .left-page {
+        padding: 30px 20px;
+    }
+
+
+    .photobooth {
+        width: 75%;
+
+        max-width: 230px;
+    }
+
+
+    .photobooth img {
+        max-height: 500px;
+    }
+
+
+    .left-decoration {
+        gap: 9px;
+    }
+
+
+    .left-decoration p {
+        font-size: 15px;
+    }
+
+
+    .right-page {
+        padding: 45px 25px;
+    }
+
+
+    .letter h1 {
+        font-size: 39px;
+    }
+
+
+    .letter p {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    .divider::before,
+    .divider::after {
+        width: 45px;
+    }
+}
